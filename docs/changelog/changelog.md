@@ -1,95 +1,93 @@
-# Histórico de Versões
+# 📝 Changelog - TaskFlow
 
-Este documento registra todas as mudanças significativas no TaskFlow, seguindo o padrão [SemVer](https://semver.org/).
+All notable changes to TaskFlow will be documented in this file.
 
----
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.0] - 01-10-2025
+## [Unreleased]
 
-### 🚀 Lançamento Inicial
+### Added
+- Complete bilingual documentation (Portuguese/English)
+- GitHub Actions workflows for CI/CD and deployment
+- Branch protection rules configuration
+- Advanced configuration system
+- Keyboard shortcuts system
+- Comprehensive testing setup with Vitest
+- PWA manifest and offline support
+- Dark mode and theme customization
+- Advanced filtering and search capabilities
+- Statistics and analytics dashboard
+- Data export/import functionality
+- Responsive mobile interface
 
-#### ✨ Funcionalidades
-- **Gerenciamento completo de tarefas** - Criar, editar, excluir e concluir tarefas
-- **Sistema de prioridades** - Alta, média e baixa prioridade com indicadores visuais
-- **Datas de vencimento** - Definir prazos com alertas visuais para tarefas atrasadas
-- **Filtros avançados** - Busca por texto, prioridade e status
-- **Estatísticas em tempo real** - Cards informativos e barra de progresso
-- **Persistência local** - Dados salvos automaticamente no navegador
-- **Interface responsiva** - Design otimizado para desktop, tablet e mobile
-- **Tema automático** - Adaptação ao modo claro/escuro do sistema
+### Changed
+- Improved project structure and organization
+- Updated dependencies to latest versions
+- Enhanced TypeScript configuration
+- Better component architecture with hooks
+- Improved build process with Vite
 
-#### 🛠 Tecnologias
-- **React 18** com hooks modernos
-- **TypeScript** para desenvolvimento tipado
-- **Tailwind CSS** para estilização utilitária
-- **Vite** como build tool e dev server
-- **Vitest** + **React Testing Library** para testes
-- **Lucide React** para ícones consistentes
+### Fixed
+- Various UI/UX improvements
+- Performance optimizations
+- Accessibility enhancements
+- Cross-browser compatibility
 
-#### 📦 Instalação e Uso
-- Instalação via npm
-- Scripts de desenvolvimento e produção
-- Configuração automática do ambiente
+## [1.0.0] - 2024-01-XX
 
-#### 🧪 Qualidade de Código
-- Cobertura de testes > 90%
-- ESLint e Prettier configurados
-- TypeScript strict mode habilitado
-- CI/CD com GitHub Actions
+### Added
+- Initial release of TaskFlow
+- Basic task management functionality
+- Local storage persistence
+- Responsive design
+- Core UI components
+- Basic theming system
 
-### 📚 Documentação
-- **README abrangente** com guias detalhados
-- **Documentação técnica** para desenvolvedores
-- **Guia de contribuição** para colaboradores
-- **Templates de issues** e pull requests
-
-### 🎨 Interface do Usuário
-- Design moderno e intuitivo
-- Navegação clara e acessível
-- Feedback visual para todas as ações
-- Performance otimizada
-
----
-
-## [1.1.0] - Em desenvolvimento
-
-### 🔄 Melhorias Planejadas
-- **Sincronização entre dispositivos**
-- **Notificações push**
-- **Integração com calendários**
-- **Modo offline avançado**
-- **Backup e restauração**
-- **Temas personalizáveis**
-
-### 🐛 Correções
-- Correções de bugs reportados pela comunidade
-- Melhorias de acessibilidade
-- Otimizações de performance
+### Technical
+- React 18 with TypeScript
+- Tailwind CSS for styling
+- Vite for build tooling
+- ESLint and Prettier for code quality
+- Basic testing setup
 
 ---
 
-## Versionamento
+## 📋 Types of Changes
 
-Seguimos o padrão SemVer para versionamento:
+- **Added** for new features
+- **Changed** for changes in existing functionality
+- **Deprecated** for soon-to-be removed features
+- **Removed** for now removed features
+- **Fixed** for any bug fixes
+- **Security** in case of vulnerabilities
 
-- **PATCH** (1.0.x): Correções de bugs e melhorias menores
-- **MINOR** (1.x.0): Novas funcionalidades sem quebra de compatibilidade
-- **MAJOR** (x.0.0): Mudanças que quebram compatibilidade
+## 🤝 Contributing to Changelog
 
-## Como contribuir
+When contributing to TaskFlow, please:
 
-Para adicionar entradas ao changelog:
+1. Add your changes to the "Unreleased" section
+2. Use the appropriate change type
+3. Keep descriptions clear and concise
+4. Group similar changes together
+5. Update version numbers according to semantic versioning
 
-1. Use o formato `[Versão] - Data`
-2. Categorize as mudanças em seções apropriadas
-3. Use emojis descritivos
-4. Mantenha entradas concisas mas informativas
-5. Inclua links para issues/PRs relevantes
+### Example Entry
+```
+### Added
+- New feature description ([PR #123](https://github.com/ohugods/TaskFlow/pull/123))
 
-## Política de suporte
+### Fixed
+- Bug fix description ([Issue #456](https://github.com/ohugods/TaskFlow/issues/456))
+```
 
-- ✅ **Versão atual**: Suporte completo
-- ⚠️ **Versão anterior**: Suporte limitado (correções críticas)
-- ❌ **Versões antigas**: Sem suporte
+---
 
-Para relatar problemas ou solicitar funcionalidades, use nosso [sistema de issues](@https://github.com/ohugods/taskflow/issues).
+## 📊 Version History
+
+| Version | Release Date | Major Changes |
+|---------|-------------|---------------|
+| 1.0.0   | 2024-01-XX  | Initial release |
+| 0.x.x   | Pre-1.0     | Development versions |
+
+For more detailed information about each version, check the [GitHub Releases](https://github.com/ohugods/TaskFlow/releases) page.
