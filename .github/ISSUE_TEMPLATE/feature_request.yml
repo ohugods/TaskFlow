@@ -1,0 +1,105 @@
+name: ✨ Feature Request
+description: Sugerir uma nova funcionalidade ou melhoria
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por sugerir uma nova funcionalidade! Por favor, preencha o formulário abaixo com o máximo de detalhes possível.
+
+  - type: input
+    id: feature-summary
+    attributes:
+      label: Resumo da Funcionalidade
+      description: Uma descrição breve e clara da funcionalidade desejada
+      placeholder: Ex: Adicionar filtro por data de criação
+    validations:
+      required: true
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Descrição Detalhada
+      description: Descreva a funcionalidade em detalhes
+      placeholder: Descreva como a funcionalidade deveria funcionar, quais seriam os benefícios, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-solved
+    attributes:
+      label: Problema que Resolve
+      description: Qual problema esta funcionalidade resolveria?
+      placeholder: Descreva o problema atual e como esta funcionalidade o resolveria
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Solução Proposta
+      description: Como você gostaria que esta funcionalidade fosse implementada?
+      placeholder: Descreva sua visão de como a funcionalidade deveria funcionar
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternativas Consideradas
+      description: Quais outras soluções ou funcionalidades você considerou?
+      placeholder: Descreva outras abordagens que você considerou
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Prioridade
+      description: Qual a prioridade desta funcionalidade para você?
+      options:
+        - Baixa - Seria legal ter, mas não é urgente
+        - Média - Seria útil e melhoraria minha experiência
+        - Alta - É importante para o meu uso da aplicação
+        - Crítica - Não consigo usar a aplicação efetivamente sem isso
+    validations:
+      required: true
+
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: Complexidade Estimada
+      description: Qual sua estimativa da complexidade de implementação?
+      options:
+        - Baixa - Mudança simples, poucas linhas de código
+        - Média - Requer algumas mudanças em múltiplos arquivos
+        - Alta - Requer mudanças significativas na arquitetura
+        - Não sei - Não tenho certeza da complexidade
+    validations:
+      required: true
+
+  - type: textarea
+    id: mockups
+    attributes:
+      label: Mockups ou Wireframes
+      description: Se você tem mockups, wireframes ou designs, adicione-os aqui
+      placeholder: Cole URLs de imagens ou descreva como você imagina a interface
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Contexto Adicional
+      description: Qualquer outra informação relevante
+      placeholder: Adicione qualquer contexto adicional que possa ser útil
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Por favor, confirme que você fez o seguinte
+      options:
+        - label: Verifiquei se a funcionalidade já foi solicitada
+          required: true
+        - label: Considerei se a funcionalidade se alinha com o propósito do projeto
+          required: true
+        - label: Pensei em como a funcionalidade poderia ser implementada
+          required: true
