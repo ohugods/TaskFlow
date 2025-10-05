@@ -24,10 +24,9 @@ Welcome to the comprehensive TaskFlow documentation! This documentation is organ
 ### 📊 API Reference
 - [Overview](api/overview.md) - API introduction
 - [Data Models](api/data-models.md) - Data structure
-- [Utility Functions](api/utilities.md) - Available utility functions
 
 ### 📝 Other
-- [Changelog](changelog/changelog.md) - Change history
+- [Changelog](../../changelog/changelog.md) - Change history
 - [License](developer/license.md) - License information
 
 ## 🎯 How to Navigate

@@ -48,7 +48,7 @@ Each language version includes:
 - **Utility Functions** - Available utility functions
 
 ### 📝 Additional Resources
-- **Changelog** - Change history
+- [**Changelog**](changelog/changelog.md) - Change history
 - **License** - License information
 
 ---

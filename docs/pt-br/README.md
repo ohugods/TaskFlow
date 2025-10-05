@@ -27,7 +27,7 @@ Bem-vindo à documentação completa do TaskFlow! Esta documentação está orga
 - [Funções de Utilitários](api/utilities.md) - Funções auxiliares disponíveis
 
 ### 📝 Outros
-- [Changelog](changelog/changelog.md) - Histórico de mudanças
+- [Changelog](../changelog/changelog.md) - Histórico de mudanças
 - [Licença](developer/license.md) - Informações sobre licença
 
 ## 🎯 Como Navegar
