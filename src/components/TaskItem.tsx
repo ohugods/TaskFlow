@@ -1,17 +1,36 @@
+/**
+ * @fileoverview TaskItem component for displaying individual tasks.
+ * Provides a card-based interface for task display with actions for
+ * toggle completion, edit, and delete operations.
+ */
+
 import { Task } from '@/types/task'
 import { formatDate, isDueToday, isOverdue } from '@/utils/dateUtils'
 import { getPriorityColor, getPriorityLabel } from '@/utils/priorityUtils'
 import { clsx } from 'clsx'
 import { Calendar, Check, Clock, Edit, Trash2 } from 'lucide-react'
 
+/**
+ * Props for the TaskItem component
+ */
 interface TaskItemProps {
+  /** The task object to display */
   task: Task
+  /** Callback fired when task completion is toggled */
   onToggle: (id: string) => void
+  /** Callback fired when task is deleted */
   onDelete: (id: string) => void
+  /** Callback fired when task edit is requested */
   onEdit: (task: Task) => void
 }
 
+/**
+ * TaskItem component - displays a single task with interactive actions.
+ * Shows task details, priority, due date status, and action buttons.
+ * Adapts visual styling based on completion status and due date.
+ */
 export const TaskItem = ({ task, onToggle, onDelete, onEdit }: TaskItemProps) => {
+  // Event handlers for task actions
   const handleToggle = () => {
     onToggle(task.id)
   }
@@ -24,6 +43,13 @@ export const TaskItem = ({ task, onToggle, onDelete, onEdit }: TaskItemProps) =>
     onEdit(task)
   }
 
+  /**
+   * Calculates due date information for visual styling.
+   * Determines if task is overdue, due today, or has a future due date.
+   * Returns null if task has no due date.
+   *
+   * @returns Object with date string and status flags, or null
+   */
   const getDueDateInfo = () => {
     if (!task.dueDate) return null
 
@@ -38,6 +64,7 @@ export const TaskItem = ({ task, onToggle, onDelete, onEdit }: TaskItemProps) =>
     }
   }
 
+  // Calculate due date info once per render
   const dueDateInfo = getDueDateInfo()
 
   return (
