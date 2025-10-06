@@ -214,7 +214,7 @@ export default function App() {
           <p className="text-sm text-gray-500">
             Desenvolvido por{' '}
             <a
-              href="@https://github.com/ohugods"
+              href="https://github.com/ohugods"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary-600 hover:text-primary-700 font-medium"

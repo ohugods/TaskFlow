@@ -16,7 +16,7 @@ export const APP_CONFIG = {
   name: 'TaskFlow',
   version: '1.0.0',
   author: 'Hugo Dalmasio',
-  repository: '@https://github.com/ohugods/taskflow',
+  repository: 'https://github.com/ohugods/TaskFlow',
   license: 'MIT',
 } as const
 

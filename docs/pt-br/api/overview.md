@@ -297,4 +297,4 @@ Oportunidades de otimização:
 - **Lazy loading**: De componentes não críticos
 - **Service Workers**: Para funcionalidades offline avançadas
 
-Esta documentação da API serve como guia para desenvolvedores que desejam entender, contribuir ou integrar com o TaskFlow. Para dúvidas específicas, consulte a [documentação completa](../README.md) ou abra uma [issue](@https://github.com/ohugods/taskflow/issues).
+Esta documentação da API serve como guia para desenvolvedores que desejam entender, contribuir ou integrar com o TaskFlow. Para dúvidas específicas, consulte a [documentação completa](../README.md) ou abra uma [issue](https://github.com/ohugods/TaskFlow/issues).
