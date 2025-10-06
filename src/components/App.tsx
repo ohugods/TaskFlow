@@ -1,3 +1,9 @@
+/**
+ * @fileoverview Main App component for TaskFlow application.
+ * This component orchestrates the entire task management interface,
+ * including task creation, editing, filtering, and statistics display.
+ */
+
 import { useTasks } from '@/hooks/useTasks'
 import { Task, TaskFilters, TaskFormData } from '@/types/task'
 import { sortTasksByPriority } from '@/utils/priorityUtils'
@@ -8,23 +14,35 @@ import { TaskForm } from './TaskForm'
 import { TaskItem } from './TaskItem'
 import { TaskStats } from './TaskStats'
 
+// Default filter configuration
 const initialFilters: TaskFilters = {
   search: '',
   priority: 'all',
   status: 'all',
 }
 
+/**
+ * Main App component that manages the entire task management application.
+ * Handles task CRUD operations, filtering, and UI state management.
+ */
 export default function App() {
+  // Task management hook - provides all task-related operations and state
   const { tasks, loading, addTask, updateTask, toggleTask, deleteTask, clearCompleted } = useTasks()
-  const [showForm, setShowForm] = useState(false)
-  const [editingTask, setEditingTask] = useState<Task | null>(null)
-  const [filters, setFilters] = useState<TaskFilters>(initialFilters)
 
-  // Filter and sort tasks
+  // UI state management
+  const [showForm, setShowForm] = useState(false) // Controls task creation form visibility
+  const [editingTask, setEditingTask] = useState<Task | null>(null) // Currently editing task
+  const [filters, setFilters] = useState<TaskFilters>(initialFilters) // Active filters
+
+  /**
+   * Memoized filtered and sorted tasks list.
+   * Applies search, priority, and status filters, then sorts by priority.
+   * Recomputes only when tasks or filters change.
+   */
   const filteredTasks = useMemo(() => {
     let filtered = tasks
 
-    // Apply search filter
+    // Text search filter - matches title and description (case-insensitive)
     if (filters.search) {
       const searchLower = filters.search.toLowerCase()
       filtered = filtered.filter(
@@ -34,30 +52,42 @@ export default function App() {
       )
     }
 
-    // Apply priority filter
+    // Priority-based filtering
     if (filters.priority !== 'all') {
       filtered = filtered.filter((task) => task.priority === filters.priority)
     }
 
-    // Apply status filter
+    // Status-based filtering (completed/pending/all)
     if (filters.status === 'completed') {
       filtered = filtered.filter((task) => task.completed)
     } else if (filters.status === 'pending') {
       filtered = filtered.filter((task) => !task.completed)
     }
 
+    // Sort by priority and return
     return sortTasksByPriority(filtered)
   }, [tasks, filters])
 
+  // Event handlers for task operations
+
+  /**
+   * Handles adding a new task and closes the form
+   */
   const handleAddTask = (taskData: TaskFormData) => {
     addTask(taskData)
     setShowForm(false)
   }
 
+  /**
+   * Sets a task for editing mode
+   */
   const handleEditTask = (task: Task) => {
     setEditingTask(task)
   }
 
+  /**
+   * Handles updating an existing task and exits edit mode
+   */
   const handleUpdateTask = (taskData: TaskFormData) => {
     if (editingTask) {
       updateTask(editingTask.id, taskData)
@@ -65,11 +95,15 @@ export default function App() {
     }
   }
 
+  /**
+   * Cancels form operations (creation or editing) and resets UI state
+   */
   const handleCancelForm = () => {
     setShowForm(false)
     setEditingTask(null)
   }
 
+  // Computed values
   const completedTasksCount = tasks.filter((task) => task.completed).length
 
   if (loading) {
@@ -180,7 +214,7 @@ export default function App() {
           <p className="text-sm text-gray-500">
             Desenvolvido por{' '}
             <a
-              href="@https://github.com/ohugods"
+              href="https://github.com/ohugods"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary-600 hover:text-primary-700 font-medium"
